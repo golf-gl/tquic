@@ -112,7 +112,7 @@ const MIN_PAYLOAD_LEN: usize = 4;
 const MAX_ACK_RANGES: usize = 68;
 
 /// Default outgoing udp datagram payloads size.
-const DEFAULT_SEND_UDP_PAYLOAD_SIZE: usize = 1200;
+const DEFAULT_SEND_UDP_PAYLOAD_SIZE: usize = 1400;
 
 /// The maximum number of undecryptable packets that can be buffered.
 const MAX_UNDECRYPTABLE_PACKETS: usize = 10;
@@ -685,7 +685,7 @@ pub struct RecoveryConfig {
 impl Default for RecoveryConfig {
     fn default() -> RecoveryConfig {
         RecoveryConfig {
-            max_datagram_size: 1200,
+            max_datagram_size: 1400,
             max_ack_delay: time::Duration::from_millis(0),
             congestion_control_algorithm: CongestionControlAlgorithm::Bbr,
             min_congestion_window: 2_u64,
